@@ -1995,6 +1995,8 @@ dependencies = [
  "actix-web",
  "dotenv",
  "mysql",
+ "refinery",
+ "refinery-macros",
  "regex",
  "rocket 0.5.0",
  "rocket_contrib",
@@ -3027,6 +3029,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "refinery"
+version = "0.8.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a2783724569d96af53464d0711dff635cab7a4934df5e22e9fbc9e181523b83e"
+dependencies = [
+ "refinery-core",
+ "refinery-macros",
+]
+
+[[package]]
+name = "refinery-core"
+version = "0.8.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "08d6c80329c0455510a8d42fce286ecb4b6bcd8c57e1816d9f2d6bd7379c2cc8"
+dependencies = [
+ "async-trait",
+ "cfg-if 1.0.0",
+ "log 0.4.20",
+ "regex",
+ "serde",
+ "siphasher",
+ "thiserror",
+ "time 0.3.31",
+ "toml 0.8.8",
+ "url 2.5.0",
+ "walkdir",
+]
+
+[[package]]
+name = "refinery-macros"
+version = "0.8.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6ab6e31e166a49d55cb09b62639e5ab9ba2e73f2f124336b06f6c321dc602779"
+dependencies = [
+ "proc-macro2 1.0.78",
+ "quote 1.0.35",
+ "refinery-core",
+ "regex",
+ "syn 2.0.48",
+]
+
+[[package]]
 name = "regex"
 version = "1.10.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3541,6 +3585,12 @@ name = "simdutf8"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f27f6278552951f1f2b8cf9da965d10969b2efdea95a6ec47987ab46edfe263a"
+
+[[package]]
+name = "siphasher"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "54ac45299ccbd390721be55b412d41931911f654fa99e2cb8bfb57184b2061fe"
 
 [[package]]
 name = "slab"
